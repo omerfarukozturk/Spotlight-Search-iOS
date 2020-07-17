@@ -12,12 +12,10 @@ Add **SpotlightManager.swift** file to your project.
 Add this delegate function in **AppDelegate.swift** to handle Spotlight Item tap action. 
 
 ```
-func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
     // Called when Spotlight item tapped. Do anything with specified data.
     SpotlightManager.sharedInstance.spotlightItemTapAction(userActivity)
-        
-  return true
+    return true
 }
 ```
 
