@@ -15,11 +15,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         self.descriptionLabel.text = "Spotlight items loaded."
     }
-
     
     func setSelectedItem(data: [String : String]){
         thumbnailImage.image = UIImage(named: data["thumbnailImage"] ?? "")

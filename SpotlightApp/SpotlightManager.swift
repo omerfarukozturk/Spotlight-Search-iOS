@@ -31,7 +31,7 @@ class SpotlightManager {
 
         // Set thumbnail image.
         if let thumbnail = UIImage(named: parameters["thumbnailImage"] ?? ""){
-            searchableItemAttributeSet.thumbnailData = UIImageJPEGRepresentation(thumbnail, 0.1)
+            searchableItemAttributeSet.thumbnailData = thumbnail.jpegData(compressionQuality: 0.1)
         }
         
         if let phoneNumbers = phoneNumbers {
